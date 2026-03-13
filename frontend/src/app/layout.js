@@ -2,8 +2,8 @@ import { AuthProvider } from '../context/AuthContext';
 import '../styles/globals.css';
 
 export const metadata = {
-  title: 'Trip Planner – AI Travel Itinerary Generator',
-  description: 'Plan your perfect trip with real AI-powered itineraries for any destination worldwide.',
+  title: 'Travel Recommendation System – Get Smart Trip Recommendations',
+  description: 'Get personalized trip recommendations for any destination worldwide.',
 };
 
 export default function RootLayout({ children }) {
