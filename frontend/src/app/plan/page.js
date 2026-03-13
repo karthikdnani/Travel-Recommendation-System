@@ -62,7 +62,7 @@ export default function PlanPage() {
 
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-slate-800">Plan Your Trip</h1>
-          <p className="text-slate-500 mt-2 text-sm">Gemini AI will generate a complete itinerary for any destination</p>
+          <p className="text-slate-500 mt-2 text-sm">Get a personalized itinerary for any destination</p>
         </div>
 
         {/* Steps */}
@@ -130,7 +130,7 @@ export default function PlanPage() {
           {step === 2 && (
             <div className="space-y-4">
               <h2 className="font-bold text-slate-800 text-lg flex items-center gap-2"><Target className="w-5 h-5 text-blue-600" /> What interests you?</h2>
-              <p className="text-sm text-slate-500">AI tailors your itinerary to your interests</p>
+              <p className="text-sm text-slate-500">System tailors your itinerary to your interests</p>
               <div className="grid grid-cols-2 gap-2">
                 {INTERESTS.map(i => (
                   <button key={i.value} onClick={() => toggleInterest(i.value)}
@@ -200,7 +200,7 @@ export default function PlanPage() {
             {step < 3
               ? <button onClick={next} className="flex-1 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-sm transition">Continue →</button>
               : <button onClick={submit} className="flex-1 flex items-center justify-center gap-2 py-3 bg-blue-600 hover:bg-blue-500 text-white font-semibold rounded-xl text-sm transition">
-                  <Sparkles className="w-4 h-4" /> Generate AI Itinerary
+                  <Sparkles className="w-4 h-4" /> Generate Trip
                 </button>
             }
           </div>
@@ -226,7 +226,7 @@ function Field({ label, icon: Icon, type, placeholder, value, onChange }) {
 function GeneratingScreen({ destination }) {
   const [msgIdx, setMsgIdx] = useState(0);
   const msgs = [
-    'Connecting to Gemini AI...',
+    'Connecting to server...',
     `Researching ${destination}...`,
     'Finding unique attractions...',
     'Planning day-by-day itinerary...',
@@ -244,7 +244,7 @@ function GeneratingScreen({ destination }) {
         <div className="w-20 h-20 bg-blue-600/20 rounded-full flex items-center justify-center mx-auto mb-6 border-2 border-blue-400/30">
           <Globe className="w-10 h-10 text-blue-400 animate-spin" />
         </div>
-        <h2 className="text-2xl font-bold mb-2">Gemini AI is planning your trip</h2>
+        <h2 className="text-2xl font-bold mb-2">Planning your trip</h2>
         <p className="text-blue-300 text-lg mb-8 min-h-[28px]">{msgs[msgIdx]}</p>
         <div className="w-56 h-1.5 bg-blue-900/50 rounded-full mx-auto overflow-hidden">
           <div className="h-full bg-blue-400 rounded-full animate-pulse" style={{ width: `${((msgIdx + 1) / msgs.length) * 100}%`, transition: 'width 1.8s ease' }} />
