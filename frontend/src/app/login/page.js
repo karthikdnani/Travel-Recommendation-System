@@ -30,7 +30,7 @@ export default function LoginPage() {
             <Globe className="w-8 h-8 text-white" />
           </div>
           <h1 className="text-2xl font-bold text-slate-800">Welcome back</h1>
-          <p className="text-slate-500 mt-1">Sign in to your Trip Planner account</p>
+          <p className="text-slate-500 mt-1">Sign in to your account</p>
         </div>
 
         <div className="bg-white rounded-2xl shadow-sm border border-slate-100 p-8">
