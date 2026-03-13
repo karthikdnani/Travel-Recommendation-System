@@ -33,7 +33,7 @@ app.use('/api/users', require('./routes/users'));
 app.use('/api/images', require('./routes/images'));
 
 // ── Health Check ──────────────────────────────────────────
-app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'Trip Planner API running' }));
+app.get('/api/health', (req, res) => res.json({ status: 'ok', message: 'Travel Recommendation System API running' }));
 
 // ── 404 Handler ───────────────────────────────────────────
 app.use((req, res) => res.status(404).json({ error: 'Route not found' }));
