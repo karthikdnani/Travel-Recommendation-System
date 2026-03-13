@@ -1,9 +1,9 @@
-# Trip Planner — AI Travel Itinerary Generator
+# Travel Recommendation System — Personalized Trip Itineraries
 
-A full-stack web application that uses **Google Gemini AI** to generate complete day-by-day travel itineraries for any destination worldwide.
+A full-stack web application that generates personalized day-by-day travel itineraries for any destination worldwide.
 
 ## Features
-- Real Gemini AI generates unique itineraries for ANY city
+- Personalized itineraries generated for ANY city
 - Precise GPS map pins using Nominatim + OpenStreetMap
 - Real destination photos from Unsplash
 - Hotel recommendations with images
@@ -18,7 +18,7 @@ A full-stack web application that uses **Google Gemini AI** to generate complete
 | Frontend | Next.js 15, React 18, Tailwind CSS, Lucide Icons |
 | Backend | Node.js, Express.js |
 | Database | MongoDB (local or Atlas) |
-| AI | Google Gemini 1.5 Flash (free) |
+| AI/Generation | Groq API (Llama 3.1 8B) |
 | Maps | Leaflet.js + OpenStreetMap + Nominatim |
 | Images | Unsplash API (free) |
 
@@ -32,10 +32,10 @@ Make sure MongoDB service is running.
 
 ### Step 2: Get Free API Keys
 
-**Gemini AI (required):**
-1. Go to https://aistudio.google.com/app/apikey
-2. Sign in with Google
-3. Click "Create API Key"
+**Groq API (required for trip generation):**
+1. Go to https://console.groq.com
+2. Sign up for free
+3. Create an API key
 4. Copy the key
 
 **Unsplash (optional - for photos):**
@@ -55,7 +55,7 @@ Edit `backend/.env`:
 ```
 MONGODB_URI=mongodb://localhost:27017/trip-planner
 JWT_SECRET=any_long_random_string_here
-GEMINI_API_KEY=your_gemini_key_here
+GROQ_API_KEY=your_groq_api_key_here
 UNSPLASH_ACCESS_KEY=your_unsplash_key_here
 PORT=5000
 FRONTEND_URL=http://localhost:3000
